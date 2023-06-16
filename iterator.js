@@ -1,6 +1,8 @@
 
-const text = "Hvis jeg skulle beskrive min bil, sÃ¥ ville det vÃ¦re ...";
+const text = " Det gÃ¸r nÃ¦ppe noget godt for ens selvforstÃ¥else, nÃ¥r man er 13 Ã¥r.";
 let newText = [];
+let finalText = [];
+console.log(text)
 
 for (let i = 0; i < text.length; i++) {
   if(text[i] !== "Ã") {
@@ -13,14 +15,20 @@ for (let i = 0; i < text.length; i++) {
       case "¥":
         newText.push("å");
         break;
-      case ",":
+      case "¸":
         newText.push("ø");
         break;
     }
   };
 }
 
-finalString = newText.join(" ");
+for (let i = 0; i < newText.length; i++) {
+  if(newText[i] !== "¦" && newText[i] !== "¥" && newText[i] !== "¸") {
+    finalText.push(newText[i]);
+  }
+}
+
+finalString = finalText.join(" ");
 
 console.log(finalString);
 
